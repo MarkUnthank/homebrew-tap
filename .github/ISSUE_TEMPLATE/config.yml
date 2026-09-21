@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: CLI features, bugs, and usage questions
+    url: https://github.com/MarkUnthank/icloud-agent/issues
+    about: Mail, calendar, authentication, and agent behavior belong in the main project.
+  - name: Report a vulnerability privately
+    url: https://github.com/MarkUnthank/homebrew-tap/security/advisories/new
+    about: Keep exploit details and private information out of public issues.
