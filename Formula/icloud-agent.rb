@@ -3,8 +3,8 @@ class IcloudAgent < Formula
 
   desc "Missing agentic iCloud connection"
   homepage "https://github.com/MarkUnthank/icloud-agent"
-  url "https://github.com/MarkUnthank/icloud-agent/releases/download/v0.2.0/icloud_agent-0.2.0.tar.gz"
-  sha256 "585cb41c5449944a726b7289f5c2c3d13c184bdf45a2d633b42b1505fe1ea6df"
+  url "https://github.com/MarkUnthank/icloud-agent/releases/download/v0.3.0/icloud_agent-0.3.0.tar.gz"
+  sha256 "0b56d56b58eee36cf0ebfa3a67e0f338ed6fb6b663fb8bab7932b036179c646e"
   license "MIT"
 
   depends_on "cmake" => :build
@@ -153,9 +153,19 @@ class IcloudAgent < Formula
     sha256 "45222d94ddd511536f3b2f7d9deae3b2339b4ce0f075f1ca25703b07cad9dd21"
   end
 
+  resource "markdown-it-py" do
+    url "https://files.pythonhosted.org/packages/06/ff/7841249c247aa650a76b9ee4bbaeae59370dc8bfd2f6c01f3630c35eb134/markdown_it_py-4.2.0.tar.gz"
+    sha256 "04a21681d6fbb623de53f6f364d352309d4094dd4194040a10fd51833e418d49"
+  end
+
   resource "mcp" do
     url "https://files.pythonhosted.org/packages/ba/93/0142dc84a666daf8ad51a34268f34c12fd6fda4f3810c4be2504eecc8212/mcp-1.30.0.tar.gz"
     sha256 "445414625fce5c295faa505bb11bacece661ab6f4028d57c935db57820b7a3e4"
+  end
+
+  resource "mdurl" do
+    url "https://files.pythonhosted.org/packages/d6/54/cfe61301667036ec958cb99bd3efefba235e65cdeb9c84d24a8293ba1d90/mdurl-0.1.2.tar.gz"
+    sha256 "bb413d29f5eea38f31dd4754dd7377d4465116fb207585f97bf925588687c1ba"
   end
 
   resource "more-itertools" do
@@ -171,6 +181,11 @@ class IcloudAgent < Formula
   resource "platformdirs" do
     url "https://files.pythonhosted.org/packages/f8/13/f870dd0b42690138e4e37a76b5138e5690ed4365a77071bb092d59037da0/platformdirs-4.11.11.tar.gz"
     sha256 "b0befe8a90759e4a9a8b9820d434ae226a6549063210b596da0038a7a05aede4"
+  end
+
+  resource "prompt-toolkit" do
+    url "https://files.pythonhosted.org/packages/7d/ea/39b988c938f75cb75d7045b5c69f8bfed47ee2152c8837fb403de29d6fb8/prompt_toolkit-3.0.53.tar.gz"
+    sha256 "9ec8a0ad96d5c56148b3f914aa79c1564c3fde5d2e6b876e7bc327e353cf8fa6"
   end
 
   resource "pycparser" do
@@ -191,6 +206,11 @@ class IcloudAgent < Formula
   resource "pydantic-settings" do
     url "https://files.pythonhosted.org/packages/68/ca/31c57507b13119d7d3cfa1576dad2911a4861e3be07b579395f4e9d393f9/pydantic_settings-2.15.0.tar.gz"
     sha256 "694b793e84f766ba76a90ebdefc01d0a9a045dab0382bee70393da93712ad117"
+  end
+
+  resource "pygments" do
+    url "https://files.pythonhosted.org/packages/49/2e/ced460408999b33da6b31b0021b0f37d329e202d4169aeb164493778f25b/pygments-2.21.0.tar.gz"
+    sha256 "610ca751c9bc2492b38eb9a38a7fbc93edbbb2d7182edaf34e66ae493dee5c8c"
   end
 
   resource "pyjwt" do
@@ -223,6 +243,11 @@ class IcloudAgent < Formula
     sha256 "546ab2d3193e37e98dfefe5834484e07d0bf531708f21e1a4e227a51510b648f"
   end
 
+  resource "questionary" do
+    url "https://files.pythonhosted.org/packages/f6/45/eafb0bba0f9988f6a2520f9ca2df2c82ddfa8d67c95d6625452e97b204a5/questionary-2.1.1.tar.gz"
+    sha256 "3d7e980292bb0107abaa79c68dd3eee3c561b83a0f89ae482860b181c8bd412d"
+  end
+
   resource "recurring-ical-events" do
     url "https://files.pythonhosted.org/packages/b9/f5/898abd8fbb25766ec6cb17b244730ebf192f47963c71eeacd61aadd903a1/recurring_ical_events-3.8.2.tar.gz"
     sha256 "e731af31d0b7dec5cd47a1defacd8549e2f36fab1c1995e8b9f042822a0acf8e"
@@ -231,6 +256,16 @@ class IcloudAgent < Formula
   resource "referencing" do
     url "https://files.pythonhosted.org/packages/22/f5/df4e9027acead3ecc63e50fe1e36aca1523e1719559c499951bb4b53188f/referencing-0.37.0.tar.gz"
     sha256 "44aefc3142c5b842538163acb373e24cce6632bd54bdb01b21ad5863489f50d8"
+  end
+
+  resource "rich" do
+    url "https://files.pythonhosted.org/packages/e9/67/cae617f1351490c25a4b8ac3b8b63a4dda609295d8222bad12242dfdc629/rich-14.3.4.tar.gz"
+    sha256 "817e02727f2b25b40ef56f5aa2217f400c8489f79ca8f46ea2b70dd5e14558a9"
+  end
+
+  resource "rich-argparse" do
+    url "https://files.pythonhosted.org/packages/6a/e5/1064c43203a357d668cd42435f7a15fe6af51512d85b2104fecb937aa861/rich_argparse-1.8.0.tar.gz"
+    sha256 "679df3d832fa94ad6e4bdb07ded088cd7ea2dddc58ae9b2b46346a40b06cbc0c"
   end
 
   resource "rpds-py" do
@@ -283,6 +318,11 @@ class IcloudAgent < Formula
     sha256 "21bb77253bb8032c05393172c4d2df395f423b7e704538f3b2407f50c032034d"
   end
 
+  resource "wcwidth" do
+    url "https://files.pythonhosted.org/packages/3d/7a/f98d4ada7c499565ab0c0fcef28a4e54fafa72b8228a6309803c80493c92/wcwidth-0.8.4.tar.gz"
+    sha256 "2dae09efa25253ae2874188e86d6861af3b1652aef4118cdf3f0bda288a957fb"
+  end
+
   resource "x-wr-timezone" do
     url "https://files.pythonhosted.org/packages/79/2b/8ae5f59ab852c8fe32dd37c1aa058eb98aca118fec2d3af5c3cd56fffb7b/x_wr_timezone-2.0.1.tar.gz"
     sha256 "9166c40e6ffd4c0edebabc354e1a1e2cffc1bb473f88007694793757685cc8c3"
@@ -304,7 +344,7 @@ class IcloudAgent < Formula
 
   test do
     require "json"
-    result = JSON.parse(shell_output("#{bin}/icloud-agent mail search --dry-run"))
+    result = JSON.parse(shell_output("#{bin}/icloud-agent mail senders --dry-run"))
     assert_equal true, result.fetch("ok")
   end
 end
