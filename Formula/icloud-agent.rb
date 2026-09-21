@@ -289,7 +289,17 @@ class IcloudAgent < Formula
   end
 
   def install
-    virtualenv_install_with_resources
+    venv = virtualenv_create(libexec, "python3.14")
+    resources.each do |r|
+      if r.name == "qh3"
+        # AWS-LC's jitter entropy implementation requires unoptimized C code.
+        # Homebrew's compiler shim otherwise replaces upstream -O0 with -Os.
+        ENV.O0 { venv.pip_install r }
+      else
+        venv.pip_install r
+      end
+    end
+    venv.pip_install_and_link buildpath
   end
 
   test do
