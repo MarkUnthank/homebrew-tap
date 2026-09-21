@@ -1,0 +1,21 @@
+name: Installation problem
+description: Report a Homebrew formula, upgrade, or installation issue.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: "For vulnerabilities, use private reporting in SECURITY.md. Redact usernames, account data, credentials, and private paths from build logs. CLI features belong in MarkUnthank/icloud-agent."
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: macOS version, architecture (Apple Silicon or Intel), Homebrew version, and formula version.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Command, expected behavior, and actual result
+      description: Include the relevant redacted build error and reproduction steps.
+    validations:
+      required: true

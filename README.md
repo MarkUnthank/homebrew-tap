@@ -53,6 +53,9 @@ follow the [removal guide](https://github.com/MarkUnthank/icloud-agent/blob/main
 Full install tests run locally on macOS. Do not use GitHub-hosted macOS runners;
 Linux CI does not claim to verify a complete macOS installation.
 
+See [CONTRIBUTING.md](CONTRIBUTING.md) for local checks and the PR process,
+[community conduct](CODE_OF_CONDUCT.md), and [private security reporting](SECURITY.md).
+
 Report CLI bugs in [icloud-agent](https://github.com/MarkUnthank/icloud-agent/issues)
 and packaging bugs in [this tap](https://github.com/MarkUnthank/homebrew-tap/issues).
 This is a third-party tap, not Homebrew/core. Formula source is [MIT licensed](LICENSE);
