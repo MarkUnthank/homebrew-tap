@@ -1,0 +1,19 @@
+Formula/icloud-agent.rb
+  s_6fe6e02598edf3::t_72e32ca51e1e6f 6-7,156-160,166-170,186-190,211-215,246-250,261-270,321-325,347
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "d0237faf4cd71b74c8c5f1a0e24b8bf2af562397",
+  "prompts": {},
+  "sessions": {
+    "s_6fe6e02598edf3": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c3ad-784d-7a11-ae07-116d60fbdcc2",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Mark Unthank <markunthank@me.com>"
+    }
+  }
+}
