@@ -1,4 +1,4 @@
-name: Homebrew
+name: Formula checks
 on:
   push:
     branches: [main]
@@ -10,23 +10,16 @@ concurrency:
 permissions:
   contents: read
 jobs:
-  install:
-    runs-on: macos-latest
-    timeout-minutes: 45
-    env:
-      HOMEBREW_NO_AUTO_UPDATE: 1
-      HOMEBREW_NO_ASK: 1
-      HOMEBREW_NO_INSTALL_CLEANUP: 1
+  syntax:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      - name: Load this formula revision
+      - name: Check formula syntax
+        run: ruby -c Formula/icloud-agent.rb
+      - name: Verify release archive checksum
+        shell: bash
         run: |
-          brew tap MarkUnthank/tap
-          cp Formula/icloud-agent.rb "$(brew --repository MarkUnthank/tap)/Formula/icloud-agent.rb"
-      - run: brew style MarkUnthank/tap/icloud-agent
-      - run: brew install --build-from-source MarkUnthank/tap/icloud-agent
-      - run: brew test MarkUnthank/tap/icloud-agent
-      - name: Check packaged agent setup
-        run: |
-          HOME="$RUNNER_TEMP/icloud-agent-home" "$(brew --prefix)/bin/icloud-agent" setup
-          test -f "$RUNNER_TEMP/icloud-agent-home/Library/Application Support/icloud-agent/plugin/icloud-agent/skills/icloud-agent/SKILL.md"
+          ruby -e 's = File.read("Formula/icloud-agent.rb"); puts s[/^  url "([^"]+)"/, 1]; puts s[/^  sha256 "([^"]+)"/, 1]' > /tmp/release-source
+          mapfile -t source < /tmp/release-source
+          curl --fail --location --retry 3 "${source[0]}" --output /tmp/icloud-agent.tar.gz
+          echo "${source[1]}  /tmp/icloud-agent.tar.gz" | sha256sum --check

@@ -1,6 +1,6 @@
 # Mark Unthank's Homebrew tap
 
-[![Homebrew](https://github.com/MarkUnthank/homebrew-tap/actions/workflows/tests.yml/badge.svg)](https://github.com/MarkUnthank/homebrew-tap/actions/workflows/tests.yml)
+[![Formula checks](https://github.com/MarkUnthank/homebrew-tap/actions/workflows/tests.yml/badge.svg)](https://github.com/MarkUnthank/homebrew-tap/actions/workflows/tests.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-86b8b5)](LICENSE)
 
 Install [icloud-agent](https://github.com/MarkUnthank/icloud-agent): **the missing agentic icloud connection**.
@@ -48,7 +48,10 @@ follow the [removal guide](https://github.com/MarkUnthank/icloud-agent/blob/main
 2. Update the formula's release URL and SHA-256 checksum.
 3. Run `brew update-python-resources MarkUnthank/tap/icloud-agent` and review the pinned resources.
 4. Run `brew style MarkUnthank/tap/icloud-agent`, `brew reinstall --build-from-source MarkUnthank/tap/icloud-agent`, and `brew test MarkUnthank/tap/icloud-agent`.
-5. Commit the formula and wait for CI. Keep the source URL immutable; never retag a release.
+5. Commit the formula and wait for Linux CI (Ruby syntax and release checksum). Keep the source URL immutable; never retag a release.
+
+Full install tests run locally on macOS. Do not use GitHub-hosted macOS runners;
+Linux CI does not claim to verify a complete macOS installation.
 
 Report CLI bugs in [icloud-agent](https://github.com/MarkUnthank/icloud-agent/issues)
 and packaging bugs in [this tap](https://github.com/MarkUnthank/homebrew-tap/issues).
