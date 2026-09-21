@@ -1,0 +1,27 @@
+.github/dependabot.yml
+  s_db1c8aca42025f::t_8b5a78ae37038a 1-10
+.github/workflows/autobump.yml
+  s_db1c8aca42025f::t_f845c77fddd29a 1-41
+.github/workflows/publish.yml
+  s_db1c8aca42025f::t_6d08963fd07720 1-65
+.github/workflows/tests.yml
+  s_db1c8aca42025f::t_3a3919b721c1fd 1-60
+README.md
+  s_db1c8aca42025f::t_f7a7546d0c39c2 1-18
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "1a5af4350a012b341011c72854bfba46228212b5",
+  "prompts": {},
+  "sessions": {
+    "s_db1c8aca42025f": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0bd5c-5131-7810-a262-39345821ee64",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Mark Unthank <markunthank@me.com>"
+    }
+  }
+}
