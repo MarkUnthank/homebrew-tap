@@ -1,0 +1,33 @@
+.github/ISSUE_TEMPLATE/config.yml
+  s_6fe6e02598edf3::t_d980158e64de79 1-8
+.github/ISSUE_TEMPLATE/install.yml
+  s_6fe6e02598edf3::t_1919f7ca9b2659 1-21
+.github/PULL_REQUEST_TEMPLATE.md
+  s_6fe6e02598edf3::t_174f899f281f87 1-12
+.github/workflows/tests.yml
+  s_6fe6e02598edf3::t_51c20d4ea946c2 15
+CODE_OF_CONDUCT.md
+  s_6fe6e02598edf3::t_ec5cd878eeca7a 1-20
+CONTRIBUTING.md
+  s_6fe6e02598edf3::t_222fa979b1ac44 1-39
+README.md
+  s_6fe6e02598edf3::t_57e51f4fb4b07b 56-58
+SECURITY.md
+  s_6fe6e02598edf3::t_9f18eacf662359 1-10
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "e07a1d9457251f280dab34783d14883f15f12522",
+  "prompts": {},
+  "sessions": {
+    "s_6fe6e02598edf3": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c3ad-784d-7a11-ae07-116d60fbdcc2",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Mark Unthank <markunthank@me.com>"
+    }
+  }
+}
